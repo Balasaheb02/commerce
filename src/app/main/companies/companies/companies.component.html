@@ -1,0 +1,32 @@
+<div class="comapany-main">
+  <table class="table" *ngIf="(companies$ | async)">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Company</th>
+        <th scope="col">State</th>
+        <th scope="col">City</th>
+        <th scope="col">Catch</th>
+        <th scope="col">Suffix</th>
+        <th scope="col">Create At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let company of (companies$ | async)">
+        <th scope="row">{{company.id}}</th>
+        <td>{{company.name}}</td>
+        <td>{{company.company}}</td>
+        <td>{{company.state}}</td>
+        <td>{{company.city}}</td>
+        <td>{{company.catch}}</td>
+        <td>{{company.suffix}}</td>
+        <td>{{company.createdAt | date:'medium'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center" *ngIf="(loadingService.loading$ | async)">
+    <div class="spinner-border text-primary d-flex justify-content-center" role="status">
+    </div>
+  </div>
+</div>
