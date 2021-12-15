@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  isSidebarOpened: boolean = false;
+  toggleSidebar(data: boolean) {
+    this.isSidebarOpened = data
+  }
+
   title = 'commerce';
 }
