@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-header">
+        {{name}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{address1}}</h5>
+        <p class="card-text">{{email}}</p>
+        <p class="card-text">{{number}}</p>
+        <a class="btn btn-primary mt-3" *ngIf="showButton" (click) = "getDetails(id)">Details</a>
+        <ng-content></ng-content>
+    </div>
+</div>
