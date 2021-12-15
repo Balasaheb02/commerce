@@ -1,0 +1,32 @@
+<div class="d-flex justify-content-center finance-main">
+<table class="table table-hover tableFixHead">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Account</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Type</th>
+        <th scope="col">Currency</th>
+        <th scope="col">description</th>
+        <th scope="col">Create At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let finance of (finance$ | async)">
+        <th scope="row">{{finance.id}}</th>
+        <td>{{finance.name}}</td>
+        <td>{{finance.account}}</td>
+        <td>{{finance.amount}}</td>
+        <td>{{finance.type}}</td>
+        <td>{{finance.currency}}</td>
+        <td>{{finance.description}}</td>
+        <td>{{finance.createdAt | date:'medium'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center" *ngIf="(loadingService.loading$ | async)">
+    <div class="spinner-border text-primary d-flex justify-content-center" role="status">
+    </div>
+  </div>
+</div>
