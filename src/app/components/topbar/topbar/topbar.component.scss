@@ -1,0 +1,33 @@
+.search-input {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #626264;
+    background: #f7f7f7;
+    border: none;
+    min-width: 385px;
+    padding: 10px;
+    height: 48px;
+  }
+
+  .pr-10{
+    padding-right: 10px;
+  }
+
+  .pl-10{
+    padding-left: 10px;
+  }
+
+  .menu_res{
+    display: none;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .menu_res{
+      display: block;
+    }
+
+    .toggle{
+      display: none;
+    }
+  }
