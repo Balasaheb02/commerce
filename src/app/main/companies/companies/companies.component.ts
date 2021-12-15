@@ -15,7 +15,7 @@ export class CompaniesComponent implements OnInit {
 
   constructor(
     private commerceService: CommerceService,
-    private loadingService: LoadingService) { }
+    public loadingService: LoadingService) { }
 
   ngOnInit() {
   }

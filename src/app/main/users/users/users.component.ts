@@ -17,7 +17,7 @@ export class UsersComponent implements OnInit {
   constructor(
     private commerceService: CommerceService,
     private router: Router,
-    private loadingService: LoadingService) { }
+    public loadingService: LoadingService) { }
 
   ngOnInit() {
   }

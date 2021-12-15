@@ -19,7 +19,7 @@ export class TopbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleSidebar(value: boolean) {
+  toggleSidebar() {
     this.toggleValue = !this.toggleValue;
     this.toggleButton.emit(this.toggleValue);
   }
