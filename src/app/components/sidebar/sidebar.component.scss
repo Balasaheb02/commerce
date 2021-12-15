@@ -1,0 +1,184 @@
+.left-menu {
+  float: left;
+  width: 260px;
+  height: 100%;
+  padding-top: 10px;
+  padding-left: 4px;
+  padding-bottom: 10px;
+
+  .fixed-nav {
+    position: fixed;
+    height: 100%;
+    background: #fff;
+  }
+
+  .logo {
+    padding: 10px;
+    border-radius: 0px;
+    text-align: center;
+    height: 60px;
+  }
+  .nav-set {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 260px;
+    height: 100%;
+    transition: width 0.25s ease-in-out;
+    background: #f7f7f7;
+    border-radius: 0px 24px 24px 0px;
+    padding: 0 7px;
+    ul {
+      list-style-type: none;
+      padding: 0px;
+    }
+    .nav-item {
+      padding: 0px 0px;
+      margin-bottom: 10px;
+      a {
+        display: flex;
+        justify-content: left;
+        color: #626264;
+        padding: 10px;
+        align-items: center;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 600;
+          color: #fff;
+        }
+
+        span {
+          display: flex;
+          height: 40px;
+          width: 40px;
+          background: rgba(132, 132, 132, 0.06);
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          margin-right: 13px;
+
+          .eva {
+            font-size: 25px;
+          }
+        }
+      }
+
+      .active {
+        p {
+          color: #fff;
+        }
+        span {
+          background: #fff;
+          .eva {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .toggle-btn {
+    span {
+      display: block;
+      max-width: 100px;
+      background: #282736;
+      margin: auto;
+      text-align: center;
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.sidebar-slider {
+  width: 92px !important;
+
+  .nav-set {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 78px;
+    height: 100%;
+    transition: margin-left 0.25s ease-out;
+  }
+
+  .toggle-btn span {
+    max-width: 56px;
+    margin-left: 12px;
+  }
+  .main-box {
+    float: right;
+    width: calc(100% - 102px) !important;
+    padding: 10px 30px;
+  }
+  .nav-set .nav-item a p {
+    display: none;
+  }
+  .nav-set .nav-item a span {
+    margin-right: 0px !important;
+  }
+
+  .nav-set .nav-item a {
+    padding-left: 24px;
+  }
+
+  .logo img {
+    width: 60%;
+  }
+}
+
+.time-card {
+  width: 251px;
+  height: 324px;
+  background: #ffffff;
+  border-radius: 20px;
+
+  .close-icon{
+    padding-top: 40px;
+    padding-right: 20px;
+  }
+  .inner-overlay {
+    background: #ffffff;
+    height: 324px;
+    width: 140px;
+    align-items: center;
+    border-radius: 20px;
+
+    .overlay {
+      background: #ffffff;
+      height: 284px;
+      width: 178px;
+      border-radius: 20px;
+
+      .clock-image{
+        padding-bottom: 27px;
+      }
+    }
+  }
+}
+
+.active {
+  background: #503e9d;
+  border-radius: 12px;
+  color: #fff !important;
+}
+
+
+
+.user {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 40px;
+}
+
+
+@media screen and (max-width: 1024px) {
+ .left-menu{
+   position: absolute;
+   display: none;
+ }
+}

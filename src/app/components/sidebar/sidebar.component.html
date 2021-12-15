@@ -1,0 +1,79 @@
+<div class="left-menu" [class.sidebar-slider]="isSidebarOpened">
+    <div class="fixed-nav">
+        <div class="nav-set d-flex flex-column" [class.justify-content-between]="!isSidebarOpened">
+            <div>
+                <div class="logo d-flex">
+                    <div *ngIf="!isSidebarOpened" class="d-flex">
+                        <img src="assets/path410.svg" width="42px" height="21px"><span
+                            class="pl-5 fs-18 font-bold">E-commerce</span>
+                    </div>
+                    <img src="assets/path410.svg" *ngIf="isSidebarOpened">
+                </div>
+                <ul>
+                    <li class="nav-item clickable">
+                        <a routerLink="/home" routerLinkActive="active">
+                            <div class="fs-16 font-normal d-flex align-items-center">
+                                <img src="assets/home.svg" width="50px" height="24px" class="pl-5 pr-24">Home
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item clickable">
+                        <a routerLink="/user" routerLinkActive="active">
+                            <div class="fs-16 font-normal d-flex align-items-center">
+                                <img src="assets/order.svg" width="50px" height="24px" class="pl-5 pr-24">Users
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item clickable">
+                        <a routerLink="/company" routerLinkActive="active">
+                            <div class="fs-16 font-normal d-flex align-items-center">
+                                <img src="assets/help.svg" width="50px" height="24px" class="pl-5 pr-24">Company
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item clickable">
+                        <a routerLink="/finance" routerLinkActive="active">
+                            <div class="fs-16 font-normal d-flex align-items-center">
+                                <img src="assets/Settings.svg" width="50px" height="24px"
+                                    class="pl-5 pr-24">Finance
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="time-card align-self-center flex-column d-flex justify-content-center align-items-center"
+                *ngIf="!isSidebarOpened">
+                <div class="align-self-end close-icon">
+                    <img src="assets/Close.svg" width="20px" height="20px">
+                </div>
+                <div class="inner-overlay d-flex flex-column p-10">
+                    <div class="overlay d-flex flex-column p-10">
+                        <div class=" align-self-center d-flex flex-column align-items-center">
+
+                            <img src="assets/clock.svg" class="clock-image" width="64px" height="62px">
+
+                            <p class="fs-14 font-600">Your Order is now Ready</p>
+
+                            <small class="color-gray fs-12">Splint Doumo</small>
+                            <small class="color-gray fs-12">Order Id: #ED564F</small>
+                            <button class="clock-button d-flex justify-content-center align-items-center"> <span
+                                    class="full-width">Details</span> <span><img src="assets/Arrow-right.svg"
+                                        width="16px" height="13px"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user d-flex justify-content-between align-items-center" *ngIf="!isSidebarOpened">
+                <div>
+                    <p>Mark Clark</p>
+                    <small class="color-gray fs-12">markclarke@gmail.com</small>
+                </div>
+                <div class="drag-icon">
+                    <img src="assets/Menu.svg" width="14px" height="24px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
