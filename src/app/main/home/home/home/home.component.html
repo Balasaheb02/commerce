@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center home-main">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Product</th>
+                <th scope="col">Description</th>
+                <th scope="col">Department</th>
+                <th scope="col">Price</th>
+                <th scope="col">Create At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of (products$ | async)">
+                <th scope="row">{{product.id}}</th>
+                <td>{{product.Product}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.department}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.createdAt | date:'medium'}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center" *ngIf="(loadingService.loading$ | async)">
+        <div class="spinner-border text-primary d-flex justify-content-center" role="status">
+        </div>
+      </div>
+</div>
